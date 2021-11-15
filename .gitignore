@@ -4,3 +4,6 @@ big/
 # Django
 __pycache__
 db.sqlite3
+
+# PostgreSQL
+.postgresql.conf.swp
