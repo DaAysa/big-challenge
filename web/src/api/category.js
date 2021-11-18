@@ -2,11 +2,11 @@ import axios from 'axios';
 
 export const fetchCategories = async (setCategories) => {
   try{
-    const response = await axios({
+    const { data: categories } = await axios({
       url: 'http://localhost:8000/api/categories/',
     });
 
-    setCategories(response.data);
+    setCategories(categories);
   } catch (error) {
     console.log(error);
   }
@@ -14,11 +14,11 @@ export const fetchCategories = async (setCategories) => {
 
 export const fetchCategory = async (id, setCategory) => {
   try {
-    const response = await axios({
+    const { data: category } = await axios({
       url: `http://localhost:8000/api/categories/${id}/`,
     });
 
-    setCategory(response.data);
+    setCategory(category);
   } catch (error) {
     console.log(error);
   }

@@ -15,21 +15,23 @@ function App() {
   }, [setCategories]);
 
   useEffect(() => {
-    fetchCategory(4, setCategory)
-  }, [setCategory])
+    if (categories[0]) {
+      fetchCategory(categories[0].id, setCategory);
+    }
+  }, [setCategory, categories]);
 
   useEffect(() => {
     fetchProducts(setProducts);
   }, [setProducts]);
 
   useEffect(() => {
-    fetchProduct(3, setProduct)
-  }, [setProduct])
+    if (products[0]) {
+      fetchProduct(products[0].id, setProduct);
+    }
+  }, [setProduct, products])
 
   return (
-    <div>
-      
-    </div>
+    <div></div>
   )
 }
 
