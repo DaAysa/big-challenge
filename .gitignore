@@ -7,3 +7,6 @@ db.sqlite3
 
 # PostgreSQL
 .postgresql.conf.swp
+
+# React
+node_modules
